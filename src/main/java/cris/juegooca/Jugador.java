@@ -21,10 +21,12 @@ public class Jugador {
     private int turnosSinJugar;
     private boolean tiraOtraVez;
     private int tirada; // Para guardar lo que saca en el dado
+    private boolean pozo;//True está en el pozo, false no
 
     public Jugador(String nombre) {
         this.nombre = nombre;
         this.casillaActual = 1;
+        this.pozo = false;
     }
 
     // Tirada del dado. Guarda el valor en el atributo correspondiente
@@ -106,6 +108,15 @@ public class Jugador {
 
     public void setTirada(int tirada) {
         this.tirada = tirada;
+    }
+
+
+    public boolean isPozo() {
+        return pozo;
+    }
+
+    public void setPozo(boolean pozo) {
+        this.pozo = pozo;
     }
     
 }
